@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eccfe440-9a0c-44e8-853a-5a97843dee9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sbnz/integracija/example/SampleAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sbnz/integracija/example/SampleAppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sbnz/integracija/example/SampleAppService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sbnz/integracija/example/SampleAppService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sbnz/integracija/example/facts/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sbnz/integracija/example/facts/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sbnz/integracija/example/SampleAppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sbnz/integracija/example/SampleAppController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sbnz/integracija/example/SampleAppService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sbnz/integracija/example/SampleAppService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sbnz/integracija/example/facts/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sbnz/integracija/example/facts/Vehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/drools-spring-app-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/drools-spring-app-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/drools-spring-app-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/drools-spring-app-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../drools-spring-kjar/src/main/resources/sbnz/integracija/classify-vehicles-rules.drl" beforeDir="false" afterPath="$PROJECT_DIR$/../drools-spring-kjar/src/main/resources/sbnz/integracija/classify-vehicles-rules.drl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../drools-spring-kjar/target/classes/sbnz/integracija/classify-vehicles-rules.drl" beforeDir="false" afterPath="$PROJECT_DIR$/../drools-spring-kjar/target/classes/sbnz/integracija/classify-vehicles-rules.drl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../drools-spring-kjar/target/drools-spring-kjar-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../drools-spring-kjar/target/drools-spring-kjar-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../drools-spring-kjar/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../drools-spring-kjar/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -18,3 +18,11 @@ rule "Classify Vehicle - PRIVATE"
         $v.setDiscount(0.1);
         System.out.println("Vehicle " + $v.getName());
 end
+
+rule "Classify Vehicle - REGULAR"
+    when
+        $v: Vehicle(category == VehicleCategory.REGULAR)
+    then
+        $v.setDiscount(0.0);
+        System.out.println("Vehicle " + $v.getName());
+end
