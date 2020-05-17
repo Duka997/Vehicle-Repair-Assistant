@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b5b7908-e91d-4a32-a41d-4336975afbb0" name="Default Changelist" comment="" />
+    <list default="true" id="7b5b7908-e91d-4a32-a41d-4336975afbb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/src/main/java/sbnz/integracija/example/SampleAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/src/main/java/sbnz/integracija/example/SampleAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/src/main/java/sbnz/integracija/example/SampleAppService.java" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/src/main/java/sbnz/integracija/example/SampleAppService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/src/main/java/sbnz/integracija/example/facts/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/src/main/java/sbnz/integracija/example/facts/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/classes/META-INF/maven/sbnz.integracija/drools-spring-app/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/classes/META-INF/maven/sbnz.integracija/drools-spring-app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/SampleAppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/SampleAppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/SampleAppService.class" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/SampleAppService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/facts/Discount.class" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/facts/Discount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/facts/Repair.class" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/facts/Repair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/facts/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/facts/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/facts/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/target/classes/sbnz/integracija/example/facts/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/drools-spring-app-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/target/drools-spring-app-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/drools-spring-app-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/target/drools-spring-app-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-app/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-kjar/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-kjar/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-kjar/.project" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-kjar/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-kjar/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-kjar/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-kjar/target/drools-spring-kjar-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-kjar/target/drools-spring-kjar-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drools-spring-kjar/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/drools-spring-kjar/target/maven-archiver/pom.properties" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,10 +32,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1bqpeg5Ac0gNHsroWkhXOlUOQGh" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/drools-spring-app" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -45,5 +70,16 @@
       <updated>1589369574764</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

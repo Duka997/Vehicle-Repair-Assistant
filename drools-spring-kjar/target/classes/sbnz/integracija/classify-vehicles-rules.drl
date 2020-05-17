@@ -1,0 +1,12 @@
+package sbnz.integracija;
+
+import sbnz.integracija.example.facts.Vehicle;
+import sbnz.integracija.example.facts.VehicleCategory;
+
+rule "Classify Vehicle - STATEOWNED"
+    when
+        $v: Vehicle(category == VehicleCategory.STATEOWNED)
+    then
+        $v.setDiscount(0.2);
+        System.out.println("Vehicle " + $v.getName());
+end
