@@ -10,3 +10,11 @@ rule "Classify Vehicle - STATEOWNED"
         $v.setDiscount(0.2);
         System.out.println("Vehicle " + $v.getName());
 end
+
+rule "Classify Vehicle - PRIVATE"
+    when
+        $v: Vehicle(category == VehicleCategory.PRIVATEOWNED)
+    then
+        $v.setDiscount(0.1);
+        System.out.println("Vehicle " + $v.getName());
+end

@@ -23,14 +23,13 @@ public class Vehicle implements Serializable {
 		super();
 	}
 	
-	public Vehicle(Long id, String name, String malfunction, Double price, Double discount) {
+	public Vehicle(Long id, String name, VehicleCategory category, String malfunction, Double price) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.category = VehicleCategory.NA;
+		this.category = category;
 		this.malfunction = malfunction;
 		this.price = price;
-		this.discount = discount;
 	}
 	
 	

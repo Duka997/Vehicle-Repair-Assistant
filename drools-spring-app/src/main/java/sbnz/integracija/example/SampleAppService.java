@@ -39,13 +39,14 @@ public class SampleAppService {
 		//Kreiranje cinjenica
         Vehicle v1 = new Vehicle();
         
+        v1.setId((long) 1);
         v1.setName("JGSP vozilo");
         v1.setCategory(VehicleCategory.STATEOWNED);
         v1.setPrice(250.0);
         
-		kieSession.insert(v1);
+		kieSession.insert(v);
 		kieSession.fireAllRules();
 		kieSession.dispose();
-		return v1;
+		return v;
 	}
 }

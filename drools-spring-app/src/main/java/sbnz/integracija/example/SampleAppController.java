@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import sbnz.integracija.example.facts.Item;
 import sbnz.integracija.example.facts.Item.Category;
 import sbnz.integracija.example.facts.Vehicle;
+import sbnz.integracija.example.facts.VehicleCategory;
 
 @RestController
 public class SampleAppController {
@@ -37,11 +38,12 @@ public class SampleAppController {
 	}
 	
 	@RequestMapping(value = "/vehicle", method = RequestMethod.GET, produces = "application/json")
-	public Vehicle getVehicle(@RequestParam(required = true) String id, @RequestParam(required = true) String name, @RequestParam(required = true) double salePrice) {
+	public Vehicle getVehicle(@RequestParam(required = true) String id, @RequestParam(required = true) String name, @RequestParam(required = true) double price,
+			@RequestParam(required = true) String malfunction, @RequestParam(required = true) VehicleCategory cat) {
 
-		Vehicle newVehicle = new Vehicle();
+		Vehicle newVehicle = new Vehicle(Long.parseLong(id), name, cat, malfunction, price);
 
-		log.debug("EJJJ Item request received for: " + newVehicle);
+		log.debug("----------- Vehicle request received for: " + newVehicle);
 
 		Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
 
