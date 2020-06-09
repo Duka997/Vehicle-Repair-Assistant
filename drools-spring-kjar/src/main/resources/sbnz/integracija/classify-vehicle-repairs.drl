@@ -3,10 +3,62 @@ package sbnz.integracija;
 import sbnz.integracija.example.facts.Item;
 
 
-rule "Neravnomerno habanje guma"
+rule "Lost Wheel Distance"
     when
-        $v: Vehicle( symptoms == "smanjeno prijanjanje na putu" )
+        $v: Vehicle( symptoms[1] == "Check Engine Light comes on" && symptoms[0] == "ABS warning light may come on")
     then
-        $v.setSolution("Zamena guma");
-        System.out.println("Kvar " + $v.getSymptoms());
+        $v.setSolution(	"1. Using a bidirectional scan tool, control ABS control module and see if it responds. If it doesn’t probe it further\n"+
+					 	"2. If it responds then check all the wires, connectors and fuses that make the circuit\n"+
+					 	"3. With key on engine off, check the voltage of CAN C+ and C-. If the readings don’t match manufacturer’s specs then the communication circuits are bad");
+        $v.setMalfunction("Lost Wheel Distance");
+        $v.setPrice(250.0);
+        System.out.println("Kvar: " + $v.getMalfunction());
+end
+
+rule "Lost Communication With Instrument Panel Control Module"
+    when
+        $v: Vehicle( symptoms[0] == "Check Engine Light comes on" && symptoms[1] == "All indicator lights in instrument panel/cluster come on")
+    then
+        $v.setSolution(	"1. Using a bidirectional scan tool, control ABS control module and see if it responds. If it doesn’t probe it further\n"+
+					 	"2. If it responds then check all the wires, connectors and fuses that make the circuit\n"+
+					 	"3. With key on engine off, check the voltage of CAN C+ and C-. If the readings don’t match manufacturer’s specs then the communication circuits are bad");
+        $v.setMalfunction("Lost Communication With Instrument Panel Control Module");
+        $v.setPrice(300.0);
+        System.out.println("Kvar: " + $v.getMalfunction());
+end
+
+rule "Lost Communication With Anti-Lock Brake System Control Module"
+    when
+        $v: Vehicle( symptoms[0] == "Check Engine Light comes on" && symptoms[1] == "ABS warning light comes on" && symptoms[2] == "TRAC or ESP/ESC (or both) warning light comes on")
+    then
+        $v.setSolution(	"1. Using a bidirectional scan tool, control ABS control module and see if it responds. If it doesn’t probe it further\n"+
+					 	"2. If it responds then check all the wires, connectors and fuses that make the circuit\n"+
+					 	"3. With key on engine off, check the voltage of CAN C+ and C-. If the readings don’t match manufacturer’s specs then the communication circuits are bad");
+        $v.setMalfunction("Lost Communication With Instrument Panel Control Module");
+        $v.setPrice(350.0);
+        System.out.println("Kvar: " + $v.getMalfunction());
+end
+
+rule "Battery Voltage Low"
+    when
+        $v: Vehicle( symptoms[0] == "Red battery light on" && symptoms[1] == "Reduced fuel economy" && symptoms[2] == "Transmission may fail")
+    then
+        $v.setSolution(	"1. Check whether battery voltage is sufficient\n"+
+					 	"2. Using a digital volt ohm meter (DVOM), check whether the charging system is working\n"+
+					 	"3. Reset the code then do a test drive. If the code returns check PCM voltage");
+        $v.setMalfunction("Battery Voltage Low");
+        $v.setPrice(400.0);
+        System.out.println("Kvar: " + $v.getMalfunction());
+end
+
+rule "Driver-Side Side Air Bag Module Circuits Short"
+    when
+        $v: Vehicle( symptoms[0] == "Airbag warning lights may come on" && symptoms[1] == "Abnormal illumination of airbag warning lights")
+    then
+        $v.setSolution(	"1. Visually inspect all wiring to the driver-side side air bag module for loose, open or short connections\n"+
+					 	"2. Perform resistance test on driver-side side air bag module\n"+
+					 	"3. Perform resistance test on airbag control module");
+        $v.setMalfunction("Driver-Side Side Air Bag Module And Other Air Bag Module Circuits Short");
+        $v.setPrice(450.0);
+        System.out.println("Kvar: " + $v.getMalfunction());
 end

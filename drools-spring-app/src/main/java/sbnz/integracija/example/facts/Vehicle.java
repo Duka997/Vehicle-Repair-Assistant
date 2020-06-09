@@ -1,6 +1,8 @@
 package sbnz.integracija.example.facts;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import sbnz.integracija.example.facts.Item.Category;
@@ -15,7 +17,7 @@ public class Vehicle implements Serializable {
 	private Long id;
 	private String name;
 	private String malfunction;
-	private String symptoms;
+	private List<String> symptoms;
 	private Double price;
 	private Double discount;
 	private VehicleCategory category;
@@ -26,7 +28,7 @@ public class Vehicle implements Serializable {
 		super();
 	}
 	
-	public Vehicle(Long id, String name, VehicleCategory category, String malfunction, String symptoms, Double price, Double timesReapired) {
+	public Vehicle(Long id, String name, VehicleCategory category, String malfunction, List<String> symptoms, Double price, Double timesReapired) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -96,11 +98,11 @@ public class Vehicle implements Serializable {
 		this.timesRepaired = timesRepaired;
 	}
 	
-	public String getSymptoms() {
+	public List<String> getSymptoms() {
 		return symptoms;
 	}
 
-	public void setSymptoms(String symptoms) {
+	public void setSymptoms(List<String> symptoms) {
 		this.symptoms = symptoms;
 	}
 	

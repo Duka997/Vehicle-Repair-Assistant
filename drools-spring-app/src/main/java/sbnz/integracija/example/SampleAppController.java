@@ -1,5 +1,8 @@
 package sbnz.integracija.example;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,24 +43,26 @@ public class SampleAppController {
 	
 	@RequestMapping(value = "/vehicle", method = RequestMethod.GET, produces = "application/json")
 	public Vehicle getVehicle(@RequestParam(required = true) String id) {
+		
+		ArrayList<String> s;
 
 		if(Long.parseLong(id) == 1) { 
-			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Bus", VehicleCategory.STATEOWNED, "Gume", "smanjeno prijanjanje na putu", 550.0, 34.0);
+			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Bus", VehicleCategory.STATEOWNED, "Gume", Arrays.asList("ABS warning light may come on", "Check Engine Light comes on"), 0.0, 34.0);
 			log.debug("----------- Vehicle request received for: " + newVehicle);
 			Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
 			return v2;
 		} else if(Long.parseLong(id) == 2) {
-			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Kombi", VehicleCategory.PRIVATEOWNED, "Gume", "smanjeno prijanjanje na putu", 450.0, 4.0);
+			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Kombi", VehicleCategory.PRIVATEOWNED, "Gume", Arrays.asList("Check Engine Light comes on", "All indicator lights in instrument panel/cluster come on"), 0.0, 4.0);
 			log.debug("----------- Vehicle request received for: " + newVehicle);
 			Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
 			return v2;
 		} else if(Long.parseLong(id) == 3) {
-			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Motor", VehicleCategory.REGULAR, "Gume", "smanjeno prijanjanje na putu", 150.0, 1.0);
+			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Motor", VehicleCategory.REGULAR, "Gume", Arrays.asList("Check Engine Light comes on", "ABS warning light comes on", "TRAC or ESP/ESC (or both) warning light comes on"), 0.0, 1.0);
 			log.debug("----------- Vehicle request received for: " + newVehicle);
 			Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
 			return v2;
 		} else {
-			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Automobil", VehicleCategory.REGULAR, "Gume", "smanjeno prijanjanje na putu", 50.0, 7.0);
+			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Automobil", VehicleCategory.REGULAR, "Gume", Arrays.asList("Red battery light on", "Reduced fuel economy", "Transmission may fail"), 0.0, 7.0);
 			log.debug("----------- Vehicle request received for: " + newVehicle);
 			Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
 			return v2;

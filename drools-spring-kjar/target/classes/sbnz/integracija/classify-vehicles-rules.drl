@@ -4,22 +4,27 @@ import sbnz.integracija.example.facts.Vehicle;
 import sbnz.integracija.example.facts.VehicleCategory;
 
 rule "Classify Vehicle - STATEOWNED"
+	salience -1
     when
         $v: Vehicle(category == VehicleCategory.STATEOWNED, timesRepaired < 25)
     then
         $v.setDiscount(0.2);
+        $v.setPrice($v.getPrice() * 0.8);
         System.out.println("Vehicle " + $v.getName());
 end
 
 rule "Classify Vehicle - PRIVATEOWNED"
+	salience -1
     when
         $v: Vehicle(category == VehicleCategory.PRIVATEOWNED, timesRepaired < 15)
     then
         $v.setDiscount(0.1);
+        $v.setPrice($v.getPrice() * 0.9);
         System.out.println("Vehicle " + $v.getName());
 end
 
 rule "Classify Vehicle - REGULAR"
+	salience -1
     when
         $v: Vehicle(category == VehicleCategory.REGULAR, timesRepaired < 5)
     then
@@ -28,25 +33,31 @@ rule "Classify Vehicle - REGULAR"
 end
 
 rule "Classify Vehicle - STATEOWNED 25 reapirs on different vehicles"
+	salience -1
     when
         $v: Vehicle(category == VehicleCategory.STATEOWNED, timesRepaired >= 25)
     then
         $v.setDiscount(0.25);
+        $v.setPrice($v.getPrice() * 0.75);
         System.out.println("Vehicle " + $v.getName());
 end
 
 rule "Classify Vehicle - PRIVATEOWNED 15 reapirs on different vehicles"
+	salience -1
     when
-        $v: Vehicle(category == VehicleCategory.STATEOWNED, timesRepaired >= 15)
+        $v: Vehicle(category == VehicleCategory.PRIVATEOWNED, timesRepaired >= 15)
     then
         $v.setDiscount(0.15);
+        $v.setPrice($v.getPrice() * 0.85);
         System.out.println("Vehicle " + $v.getName());
 end
 
 rule "Classify Vehicle - REGULAR 5 reapirs on different vehicles"
+	salience -1
     when
         $v: Vehicle(category == VehicleCategory.REGULAR, timesRepaired >= 5)
     then
         $v.setDiscount(0.05);
+        $v.setPrice($v.getPrice() * 0.95);
         System.out.println("Vehicle " + $v.getName());
 end
