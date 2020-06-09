@@ -4,6 +4,7 @@ sbnz\integracija\example\facts\Item.class
 sbnz\integracija\example\facts\Discount.class
 sbnz\integracija\example\facts\Repair.class
 sbnz\integracija\example\SampleApp.class
+sbnz\integracija\example\facts\TiresSymptoms.class
 sbnz\integracija\example\facts\User.class
 sbnz\integracija\example\SampleAppService.class
 sbnz\integracija\example\facts\VehicleCategory.class

@@ -15,21 +15,26 @@ public class Vehicle implements Serializable {
 	private Long id;
 	private String name;
 	private String malfunction;
+	private String symptoms;
 	private Double price;
 	private Double discount;
 	private VehicleCategory category;
+	private Double timesRepaired;
+	private String solution;
 	
 	public Vehicle() {
 		super();
 	}
 	
-	public Vehicle(Long id, String name, VehicleCategory category, String malfunction, Double price) {
+	public Vehicle(Long id, String name, VehicleCategory category, String malfunction, String symptoms, Double price, Double timesReapired) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.category = category;
 		this.malfunction = malfunction;
 		this.price = price;
+		this.timesRepaired = timesReapired;
+		this.symptoms = symptoms;
 	}
 	
 	
@@ -82,6 +87,31 @@ public class Vehicle implements Serializable {
 		this.discount = discount;
 	}
 	
+	
+	public Double getTimesRepaired() {
+		return timesRepaired;
+	}
+
+	public void setTimesRepaired(Double timesRepaired) {
+		this.timesRepaired = timesRepaired;
+	}
+	
+	public String getSymptoms() {
+		return symptoms;
+	}
+
+	public void setSymptoms(String symptoms) {
+		this.symptoms = symptoms;
+	}
+	
+	public String getSolution() {
+		return solution;
+	}
+
+	public void setSolution(String solution) {
+		this.solution = solution;
+	}
+
 	@Override
     public int hashCode() {
         int hash = 3;
