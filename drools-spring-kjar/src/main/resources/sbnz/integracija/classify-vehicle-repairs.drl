@@ -3,10 +3,10 @@ package sbnz.integracija;
 import sbnz.integracija.example.facts.Item;
 
 
-rule "Classify Item - Low Range"
+rule "Neravnomerno habanje guma"
     when
-        $i: Item( cost <= 300, category == Category.NA )
+        $v: Vehicle( symptoms == "smanjeno prijanjanje na putu" )
     then
-        $i.setCategory(Item.Category.LOW_RANGE);
-        update($i);
+        $v.setSolution("Zamena guma");
+        System.out.println("Kvar " + $v.getSymptoms());
 end
