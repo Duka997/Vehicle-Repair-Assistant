@@ -1,0 +1,12 @@
+package sbnz.integracija;
+
+import sbnz.integracija.example.facts.Item;
+
+
+rule "Neravnomerno habanje guma"
+    when
+        $v: Vehicle( symptoms == "smanjeno prijanjanje na putu" )
+    then
+        $v.setSolution("Zamena guma");
+        System.out.println("Kvar " + $v.getSymptoms());
+end
