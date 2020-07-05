@@ -8,9 +8,10 @@ rule "Classify Vehicle - STATEOWNED"
     when
         $v: Vehicle(category == VehicleCategory.STATEOWNED, timesRepaired < 25)
     then
+    	System.out.println("Original price " + $v.getPrice());
         $v.setDiscount(0.2);
         $v.setPrice($v.getPrice() * 0.8);
-        System.out.println("Vehicle " + $v.getName());
+        System.out.println("New price " + $v.getPrice() + " with discount: " + $v.getDiscount()*100);
 end
 
 rule "Classify Vehicle - PRIVATEOWNED"
@@ -18,9 +19,10 @@ rule "Classify Vehicle - PRIVATEOWNED"
     when
         $v: Vehicle(category == VehicleCategory.PRIVATEOWNED, timesRepaired < 15)
     then
+    	System.out.println("Original price " + $v.getPrice());
         $v.setDiscount(0.1);
         $v.setPrice($v.getPrice() * 0.9);
-        System.out.println("Vehicle " + $v.getName());
+        System.out.println("New price " + $v.getPrice() + " with discount: " + $v.getDiscount()*100);
 end
 
 rule "Classify Vehicle - REGULAR"
@@ -28,8 +30,9 @@ rule "Classify Vehicle - REGULAR"
     when
         $v: Vehicle(category == VehicleCategory.REGULAR, timesRepaired < 5)
     then
+    	System.out.println("Original price " + $v.getPrice());
         $v.setDiscount(0.0);
-        System.out.println("Vehicle " + $v.getName());
+        System.out.println("New price " + $v.getPrice() + " with discount: " + $v.getDiscount()*100);
 end
 
 rule "Classify Vehicle - STATEOWNED 25 reapirs on different vehicles"
@@ -37,9 +40,10 @@ rule "Classify Vehicle - STATEOWNED 25 reapirs on different vehicles"
     when
         $v: Vehicle(category == VehicleCategory.STATEOWNED, timesRepaired >= 25)
     then
+    	System.out.println("Original price " + $v.getPrice());
         $v.setDiscount(0.25);
         $v.setPrice($v.getPrice() * 0.75);
-        System.out.println("Vehicle " + $v.getName());
+        System.out.println("New price " + $v.getPrice() + " with discount: " + $v.getDiscount()*100);
 end
 
 rule "Classify Vehicle - PRIVATEOWNED 15 reapirs on different vehicles"
@@ -47,9 +51,10 @@ rule "Classify Vehicle - PRIVATEOWNED 15 reapirs on different vehicles"
     when
         $v: Vehicle(category == VehicleCategory.PRIVATEOWNED, timesRepaired >= 15)
     then
+    	System.out.println("Original price " + $v.getPrice());
         $v.setDiscount(0.15);
         $v.setPrice($v.getPrice() * 0.85);
-        System.out.println("Vehicle " + $v.getName());
+        System.out.println("New price " + $v.getPrice() + " with discount: " + $v.getDiscount()*100);
 end
 
 rule "Classify Vehicle - REGULAR 5 reapirs on different vehicles"
@@ -57,7 +62,8 @@ rule "Classify Vehicle - REGULAR 5 reapirs on different vehicles"
     when
         $v: Vehicle(category == VehicleCategory.REGULAR, timesRepaired >= 5)
     then
+    	System.out.println("Original price " + $v.getPrice());
         $v.setDiscount(0.05);
         $v.setPrice($v.getPrice() * 0.95);
-        System.out.println("Vehicle " + $v.getName());
+        System.out.println("New price " + $v.getPrice() + " with discount: " + $v.getDiscount()*100);
 end

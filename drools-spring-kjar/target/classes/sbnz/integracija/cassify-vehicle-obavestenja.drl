@@ -1,0 +1,19 @@
+package sbnz.integracija;
+
+import sbnz.integracija.example.facts.Item;
+
+rule "Same vehicle 5. time on repair"
+	salience -2
+    when
+        $v: Vehicle( timesRepaired >= 5)
+    then
+        System.out.println("Notification: Vehicle has been repaired: " + $v.getTimesRepaired());
+end
+
+rule "Repair over the budget"
+	salience -2
+    when
+        $v: Vehicle( price >= budget)
+    then
+        System.out.println("Notification: Price " + $v.getPrice() + " is over the budget: " + $v.getBudget());
+end

@@ -2,6 +2,7 @@ package sbnz.integracija.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,22 +48,38 @@ public class SampleAppController {
 		ArrayList<String> s;
 
 		if(Long.parseLong(id) == 1) { 
-			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Bus", VehicleCategory.STATEOWNED, "Gume", Arrays.asList("ABS warning light may come on", "Check Engine Light comes on"), 0.0, 34.0);
+			//Long id, String name, VehicleCategory category, String malfunction, List<String> symptoms, Double price, Double timesReapired, Double budget
+			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Bus", VehicleCategory.STATEOWNED, "", Arrays.asList("ABS warning light may come on", "Check Engine Light comes on"), 0.0, 34.0, 500.0);
 			log.debug("----------- Vehicle request received for: " + newVehicle);
 			Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
 			return v2;
 		} else if(Long.parseLong(id) == 2) {
-			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Kombi", VehicleCategory.PRIVATEOWNED, "Gume", Arrays.asList("Check Engine Light comes on", "All indicator lights in instrument panel/cluster come on"), 0.0, 4.0);
+			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Kombi", VehicleCategory.PRIVATEOWNED, "", Arrays.asList("Check Engine Light comes on", "All indicator lights in instrument panel/cluster come on"), 0.0, 4.0, 500.0);
 			log.debug("----------- Vehicle request received for: " + newVehicle);
 			Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
 			return v2;
 		} else if(Long.parseLong(id) == 3) {
-			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Motor", VehicleCategory.REGULAR, "Gume", Arrays.asList("Check Engine Light comes on", "ABS warning light comes on", "TRAC or ESP/ESC (or both) warning light comes on"), 0.0, 1.0);
+			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Motor", VehicleCategory.REGULAR, "", Arrays.asList("Check Engine Light comes on", "ABS warning light comes on", "TRAC or ESP/ESC (or both) warning light comes on"), 0.0, 1.0, 400.0);
+			log.debug("----------- Vehicle request received for: " + newVehicle);
+			Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
+			return v2;
+		} else if(Long.parseLong(id) == 4) {
+			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Bus", VehicleCategory.STATEOWNED, "", Arrays.asList("Check Engine Light comes on", "Other warning lights are turned on"), 0.0, 1.0, 400.0);
+			log.debug("----------- Vehicle request received for: " + newVehicle);
+			Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
+			return v2;
+		} else if(Long.parseLong(id) == 5) {
+			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Automobil", VehicleCategory.REGULAR, "", Arrays.asList("Airbag warning lights may come on", ""), 0.0, 2.0, 500.0);
+			log.debug("----------- Vehicle request received for: " + newVehicle);
+			Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
+			return v2;
+		} else if(Long.parseLong(id) == 6) {
+			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Automobil", VehicleCategory.STATEOWNED, "", Arrays.asList("Airbag warning lights may come on", "Abnormal illumination of airbag warning lights"), 0.0, 0.0, 10.0);
 			log.debug("----------- Vehicle request received for: " + newVehicle);
 			Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
 			return v2;
 		} else {
-			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Automobil", VehicleCategory.REGULAR, "Gume", Arrays.asList("Red battery light on", "Reduced fuel economy", "Transmission may fail"), 0.0, 7.0);
+			Vehicle newVehicle = new Vehicle(Long.parseLong(id), "Bus", VehicleCategory.PRIVATEOWNED, "", Arrays.asList("Red battery light on", "Reduced fuel economy", "Transmission may fail"), 0.0, 7.0, 50.0);
 			log.debug("----------- Vehicle request received for: " + newVehicle);
 			Vehicle v2 = sampleService.getClassifiedVehicle(newVehicle);
 			return v2;

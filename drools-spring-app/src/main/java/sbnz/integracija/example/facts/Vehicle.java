@@ -23,12 +23,13 @@ public class Vehicle implements Serializable {
 	private VehicleCategory category;
 	private Double timesRepaired;
 	private String solution;
+	private Double budget;
 	
 	public Vehicle() {
 		super();
 	}
 	
-	public Vehicle(Long id, String name, VehicleCategory category, String malfunction, List<String> symptoms, Double price, Double timesReapired) {
+	public Vehicle(Long id, String name, VehicleCategory category, String malfunction, List<String> symptoms, Double price, Double timesReapired, Double budget) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -37,6 +38,7 @@ public class Vehicle implements Serializable {
 		this.price = price;
 		this.timesRepaired = timesReapired;
 		this.symptoms = symptoms;
+		this.budget = budget;
 	}
 	
 	
@@ -112,6 +114,14 @@ public class Vehicle implements Serializable {
 
 	public void setSolution(String solution) {
 		this.solution = solution;
+	}
+
+	public Double getBudget() {
+		return budget;
+	}
+
+	public void setBudget(Double budget) {
+		this.budget = budget;
 	}
 
 	@Override
